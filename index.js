@@ -215,6 +215,7 @@ console.log(artists[0]["name"]);
 console.log(artists[2].bio);
 console.log(artists[2]["bio"]);
 
+//I have demonstrated two ways to access data from an array.
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
@@ -250,7 +251,7 @@ function get20s(array){
   let newArr = [];
   for(let i = 0; i < array.length; i++){
     //if array[i].years >= 1900 && array[i].years <= 2000
-    let birthYear = parseInt(array[i].years, 10);
+    let birthYear = parseInt(array[i].years, 10); //turned the "years" string into an interger for comparison
     if (birthYear >= 1900){
       newArr.push(array[i].name);
     }      
@@ -322,7 +323,7 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 function lotsOfArt(array){
   let newArr = [];
   for(let i = 0; i < array.length; i++){
-    if(array[i].paintings >= 100){
+    if(array[i].paintings > 100){
       newArr.push(array[i].name);
     }
   }
@@ -330,7 +331,7 @@ function lotsOfArt(array){
 }
 console.log(lotsOfArt(artists));
 
-
+// The function lotsOfArt takes in an "array" parameter to create a new array containing the "name" key of objects of the original array with a painting key over 100. The for loop iterates over all the objects searching for objects with a "paintings" key with a value of MORE THAN 100.
 
 
 // 🎨🎨 STRETCH 🎨🎨//
