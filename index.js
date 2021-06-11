@@ -297,16 +297,17 @@ Use addArtist to do the following:
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
 function addArtist(array){   
-  let object = {
+  let newArtist = {
     "id": 20, 
     "name": "Damian Leu",
     "years": "2000 - current day",
     "genre": "Web Design",
     "nationality": "American",
     "bio": "Lorem ipsum."
-  }  
-  array.push(object);
-  } /* Frusturation is normal. */
+  };
+  array.push(newArtist);
+  return array; /* facepalm */
+  }
   console.log(addArtist(artists));
 
   
