@@ -246,16 +246,21 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(array, key, string1, string2, key2){
+function get20s(array){
   let newArr = [];
   for(let i = 0; i < array.length; i++){
-    if(array[i][key].includes(string1 && string2)){
-      newArr.push(array[i][key2]);
-    } /* Problem arises as a string containing '- 19' will necessarily contain '19' rendering this function unusable */
-    /* How to take pieces of a string for comparison purposes */
+    //if array[i].years >= 1900 && array[i].years <= 2000
+    let birthYear = parseInt(array[i].years, 10);
+    if (birthYear >= 1900){
+      newArr.push(array[i].name);
+    }      
   }
   return newArr;
+  // this passes the test BUT!!! would not pass if any listed artist was born or died in the 21st century!!!
+  // i cannot figure out how to properly assign a deathYear var
+  // also this code is not very reusable
 }
+console.log(get20s(artists));
 
 
 
