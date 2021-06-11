@@ -277,6 +277,7 @@ function removeArtist(array, index){
        array.splice(index, 1);
        return array.length;           
 }
+console.log(removeArtist(artists,0));
    
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -295,16 +296,18 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(array){
-    let object = {};
-    object["id"] = array.id;
-    object["name"] = array.name;
-    object["years"] = array.years;
-    object["genre"] = array.genre;
-    object["nationality"] = array.nationality;
-    object["bio"] = array.bio;
-    array.push(object);
+function addArtist(array){   
+  let object = {
+    "id": 20, 
+    "name": "Damian Leu",
+    "years": "2000 - current day",
+    "genre": "Web Design",
+    "nationality": "American",
+    "bio": "Lorem ipsum."
+  }  
+  array.push(object);
   } /* Frusturation is normal. */
+  console.log(addArtist(artists));
 
   
 
